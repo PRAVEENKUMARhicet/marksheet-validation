@@ -6,8 +6,8 @@ body {
 }
 
 .container {
-    padding: 20px 50px;
-    width: 80%;
+    padding: 20px 20px;
+    width: 50%;
     margin: 0 auto;
     border: 2px solid brown;
     margin-top: 10px;
@@ -36,9 +36,18 @@ header h3 {
     font-size: 16px;
 }
 
+.institute{
+    margin-top: 30px;
+}
+
 .institute h2, .institute h3, .institute h1 {
     text-align: center;
     margin: 5px 0;
+    color: brown;
+}
+
+.institute h1{
+    color: rgb(210, 0, 0);
 }
 
 table {
@@ -60,7 +69,7 @@ table {
 table th, table td {
     border: 1px solid black;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 input{
@@ -70,6 +79,7 @@ input{
     border: none;
     outline: none;
     background-color: blanchedalmond;
+    font-size: small;
 }
 
 th{
@@ -89,24 +99,47 @@ input:focus{
     border: none;
 }
 
-footer{
+.foot{
     margin-top: 50px;
 }
 
-footer .coe{
-    float: inline-end;
-    margin-top: 0px;
+.coe{
+    padding-top: 20px;
+    text-align: right;
 }
 
-@media (max-width: 768px) {
+.date{
+    position: absolute;
+}
+
+.mark{
+    text-align: center;
+}
+
+tfoot td{
+    text-align: left;
+}
+
+@media (min-width: 768px) and (max-width:1020px){
+    .container{
+        width: 80%;
+    }
+}
+
+@media(max-width: 768px) {
+    .container{
+        width: 80%;
+    }
+
     header, .institute, .candidate-table, .mark-table {
         padding: 10px;
     }
 
     header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }    
 
     header h3 {
         font-size: 14px;
